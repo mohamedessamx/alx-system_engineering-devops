@@ -1,0 +1,2 @@
+#!/bin/bash
+tail -nv10 /etc/passwd
