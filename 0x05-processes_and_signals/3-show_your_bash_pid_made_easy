@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# Get the PID of the script
+script_pid=$$
+
+# Use pgrep to find processes named bash
+pgrep -af bash | while read -r pid pname; do
+    echo "$pid $pname"
+done
+
