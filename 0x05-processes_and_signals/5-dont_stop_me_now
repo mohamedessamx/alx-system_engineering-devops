@@ -1,19 +1,4 @@
 #!/usr/bin/env bash
+# Kills the 4-to_infinity_and_beyond process
 
-# Run the 4-to_infinity_and_beyond process
-./4-to_infinity_and_beyond &
-
-# Get the PID of the last background process
-pid=$!
-
-# Display a message indicating the process is running
-echo "4-to_infinity_and_beyond process is running with PID: $pid"
-
-# Wait for user input (e.g., press Enter)
-read -p "Press Enter to stop the process..."
-
-# Use the kill command to send the SIGTERM signal to the process
-kill -15 "$pid"
-
-# Display a message indicating the process has been terminated
-echo "4-to_infinity_and_beyond process has been terminated."
+kill "$(pgrep -f 4-to_infinity_and_beyond)"
