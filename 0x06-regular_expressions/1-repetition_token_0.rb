@@ -1,11 +1,2 @@
 #!/usr/bin/env ruby
-
-string = ARGV[0]
-
-regex = /School/
-
-if string =~ regex
-  puts string.gsub(regex, "School")
-else
-  puts ""
-end
+puts ARGV[0].scan(/hbt{2,5}n/).join
